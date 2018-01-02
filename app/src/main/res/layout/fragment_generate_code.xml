@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="digyb.la03.ybprog.GenerateCodeFragment">
+
+    <LinearLayout
+        android:layout_gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="@string/Generate_Code" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_generate_code"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_margin="15dp"
+            android:padding="12dp"
+            android:text="@string/GenerateCode_st"
+            android:radius="50dp"
+            android:textSize="16sp"
+            android:background="@color/LoginActivity_btn_color"
+            android:textColor="@color/LoginActivity_txtbtn_signup_color"/>
+
+    </LinearLayout>
+</FrameLayout>

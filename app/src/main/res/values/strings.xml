@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">YbApp - Pengawas</string>
+
+    <string name="LoginActivity_st_username">Username</string>
+    <string name="LoginActivity_st_email">Email</string>
+    <string name="LoginActivity_st_password">Password</string>
+    <string name="LoginActivity_st_btn_signup">Sign up</string>
+    <string name="LoginActivity_st_btn_login">Login</string>
+    <string name="LoginActivity_st_or">Or</string>
+    <string name="LoginActivity_st_logo">LOGO</string>
+    <string name="LoginActivity_st_forgetpass">Forgot your password?</string>
+
+    <string name="GenerateCode_st">Generate Code</string>
+    <string name="ViewScore_st">View Score</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="Generate_Code">Click Generate Code Button, to get Code</string>
+    <string name="title">Dashboard</string>
+    <string name="title_signout">Sign out</string>
+</resources>

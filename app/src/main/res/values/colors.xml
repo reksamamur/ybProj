@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Color Edit COlor -->
+    <color name="hint_color">#6E6E6E</color>
+    <color name="white">#FFFFFF</color>
+    <color name="biru_muda">#96D5FE</color>
+    <color name="biru_muda_kemudaan">#D8EEFE</color>
+
+    <!--MainActivity Color-->
+    <color name="colorPrimary">#3FB3FF</color>
+    <color name="colorPrimaryDark">#276F9E</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <!--LoginActivity COlor-->
+    <color name="LoginActivity_BG_color">#3FB3FF</color>
+    <color name="LoginActivity_Ln_color">#FFFFFF</color>
+    <color name="LoginActivity_btn_color">#2F373A</color>
+    <color name="LoginActivity_txtbtn_signup_color">#FFFFFF</color>
+    <color name="LoginActivity_txtbtn_login_color">#2F373A</color>
+
+</resources>
