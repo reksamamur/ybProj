@@ -40,11 +40,12 @@
                 app:hintTextAppearance="@style/MyHintText">
 
                 <android.support.design.widget.TextInputEditText
+                    android:id="@+id/reg_user"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/LoginActivity_st_username"
                     android:inputType="text"
-                    android:theme="@style/MyEditText"/>
+                    android:theme="@style/MyEditText" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -54,11 +55,12 @@
                 app:hintTextAppearance="@style/MyHintText">
 
                 <android.support.design.widget.TextInputEditText
+                    android:id="@+id/reg_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/LoginActivity_st_email"
                     android:inputType="textEmailAddress"
-                    android:theme="@style/MyEditText"/>
+                    android:theme="@style/MyEditText" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -70,24 +72,26 @@
                 app:hintTextAppearance="@style/MyHintText">
 
                 <android.support.design.widget.TextInputEditText
+                    android:id="@+id/reg_pass"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="@string/LoginActivity_st_password"
                     android:inputType="textPassword"
-                    android:theme="@style/MyEditText"/>
+                    android:theme="@style/MyEditText" />
             </android.support.design.widget.TextInputLayout>
 
             <android.support.v7.widget.AppCompatButton
+                android:id="@+id/btn_reg"
                 android:layout_width="fill_parent"
                 android:layout_height="50dp"
                 android:layout_margin="10dp"
+                android:background="@color/LoginActivity_btn_color"
+                android:onClick="btn_SignUp_sgn"
+                android:radius="50dp"
                 android:text="@string/LoginActivity_st_btn_signup"
                 android:textAllCaps="false"
-                android:radius="50dp"
                 android:textColor="@color/LoginActivity_txtbtn_signup_color"
-                android:textSize="20sp"
-                android:background="@color/LoginActivity_btn_color"
-                android:onClick="btn_SignUp_sgn"/>
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="match_parent"
