@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/YB.iml" filepath="$PROJECT_DIR$/YB.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ybprog.iml" filepath="$PROJECT_DIR$/ybprog.iml" />
     </modules>
   </component>
 </project>
