@@ -7,8 +7,8 @@ package digyb.la03.ybprog;
 public class Config {
 
     //URL REQUEST
-    public static final String URL_LOGIN = "http://192.168.100.2/yb/login.php";
-    public static final String URL_REG = "http://192.168.100.2/yb/register.php";
+    public static final String URL_LOGIN = "https://portly-drainage.000webhostapp.com/isi/login.php";
+    public static final String URL_REG = "https://portly-drainage.000webhostapp.com/isi/register.php";
 
     //POST REQUEST
 
