@@ -12,8 +12,12 @@ public class DetailMurid extends AppCompatActivity {
         setContentView(R.layout.activity_detail_murid);
 
         Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar_detail);
-        toolbar.setTitle(R.string.title);
+        toolbar.setTitle(R.string.detail);
         toolbar.setTitleTextColor(getResources().getColor(R.color.white));
         setSupportActionBar(toolbar);
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setDisplayShowHomeEnabled(true);
+        }
     }
 }

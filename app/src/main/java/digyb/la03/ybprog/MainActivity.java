@@ -35,10 +35,6 @@ public class MainActivity extends AppCompatActivity {
         toolbar.setTitle(R.string.title);
         toolbar.setTitleTextColor(getResources().getColor(R.color.white));
         setSupportActionBar(toolbar);
-        if (getSupportActionBar() != null){
-            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-            getSupportActionBar().setDisplayShowHomeEnabled(true);
-        }
 
         viewPager = (ViewPager)findViewById(R.id.MainActivity_ViewPager);
 
