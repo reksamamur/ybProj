@@ -1,5 +1,6 @@
 package digyb.la03.ybprog;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -58,6 +59,8 @@ public class SignupActivity extends AppCompatActivity {
         else
         {
 
+            final ProgressDialog prog = ProgressDialog.show(SignupActivity.this,"","Loading....",true);
+
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.URL_REG,
                 new Response.Listener<String>() {
                     @Override
@@ -65,12 +68,12 @@ public class SignupActivity extends AppCompatActivity {
 
                         //If we are getting success from server
                         if (response.contains(Config.REG_ISREG)) {
-//                            hideDialog();
+                            prog.dismiss();
                             Toast.makeText(SignupActivity.this, "Register Success", Toast.LENGTH_SHORT).show();
                             gotoMainActivity();
 
                         } else {
-                            hideDialog();
+                            prog.dismiss();
                             //Displaying an error message on toast
 //                            Toast.makeText(getApplicationContext(), "Invalid username or password", Toast.LENGTH_LONG).show();
                             Toast.makeText(SignupActivity.this, response, Toast.LENGTH_SHORT).show();
@@ -81,7 +84,7 @@ public class SignupActivity extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         //You can handle error here if you want
-                        hideDialog();
+                        prog.dismiss();
                         Toast.makeText(getApplicationContext(), "The server unreachable", Toast.LENGTH_LONG).show();
 
                     }
