@@ -59,7 +59,7 @@ public class LoginActivity extends AppCompatActivity {
         final String sPass = pass.getText().toString().trim();
 
 //        pDialog.setMessage("Harap Tunggu..." + "Test");
-        ProgressDialog prog = ProgressDialog.show(getApplicationContext(),"","Loading....",true);
+//        ProgressDialog prog = ProgressDialog.show(getApplicationContext(),"","Loading....",true);
 //        showDialog();
 
         //Creating a string request
