@@ -51,6 +51,13 @@ public class SignupActivity extends AppCompatActivity {
         final String sPass = edtPass.getText().toString().trim();
         final String sEmail = edtEmail.getText().toString().trim();
 
+        if (sUser.isEmpty() || sPass.isEmpty() || sEmail.isEmpty())
+        {
+            Toast.makeText(this, "Please fill all field", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.URL_REG,
                 new Response.Listener<String>() {
                     @Override
@@ -99,6 +106,7 @@ public class SignupActivity extends AppCompatActivity {
         };
 
         Volley.newRequestQueue(this).add(stringRequest);
+        }
     }
 
 

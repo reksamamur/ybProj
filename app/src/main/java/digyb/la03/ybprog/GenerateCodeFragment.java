@@ -56,7 +56,6 @@ public class GenerateCodeFragment extends Fragment {
         genereate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sendCode();
                 generateCode();
             }
         });
@@ -79,7 +78,8 @@ public class GenerateCodeFragment extends Fragment {
                     int index = (int) (rnd.nextFloat() * SALTCHARS.length());
                     salt.append(SALTCHARS.charAt(index));
                 }
-                code = salt.toString();
+                code = salt.toString().trim();
+
 
                 kode.setText(code);
 
@@ -100,6 +100,7 @@ public class GenerateCodeFragment extends Fragment {
 
     public void sendCode() {
 
+        final String sCode = kode.getText().toString().trim();
         final ProgressDialog prog = ProgressDialog.show(getContext(),"","Loading....",true);
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.URL_CODE,
@@ -110,7 +111,7 @@ public class GenerateCodeFragment extends Fragment {
                         //If we are getting success from server
                         if (response.contains(Config.CODE_ISACC)) {
                             prog.dismiss();
-                            Toast.makeText(getActivity(), "Access Updated", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getActivity(), "Code Changed", Toast.LENGTH_SHORT).show();
                             gotoMainActivity();
 
                         } else {
@@ -134,7 +135,7 @@ public class GenerateCodeFragment extends Fragment {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
                 //Adding parameters to request
-                params.put(Config.CODE_KODE, code);
+                params.put(Config.CODE_KODE, sCode);
 //                params.put(Config.REG_PASS, sPass);
 //                params.put(Config.REG_EMAIL, sEmail);
 
@@ -148,10 +149,10 @@ public class GenerateCodeFragment extends Fragment {
 
     private void gotoMainActivity()
     {
-        Intent intent = new Intent(getActivity(), MainActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//        finish();
-        startActivity(intent);
+//        Intent intent = new Intent(getActivity(), MainActivity.class);
+//        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+////        finish();
+//        startActivity(intent);
     }
 
 }

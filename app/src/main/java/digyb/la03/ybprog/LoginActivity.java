@@ -57,6 +57,13 @@ public class LoginActivity extends AppCompatActivity {
 
         final String sEmail = email.getText().toString().trim();
         final String sPass = pass.getText().toString().trim();
+        
+        if(sEmail.isEmpty() || sPass.isEmpty())
+        {
+            Toast.makeText(this, "Please input Username / Password", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
 
         final ProgressDialog prog = ProgressDialog.show(LoginActivity.this,"","Loading....",true);
 
@@ -102,6 +109,8 @@ public class LoginActivity extends AppCompatActivity {
 
         //Adding the string request to the queue
         Volley.newRequestQueue(this).add(stringRequest);
+
+        }
 
     }
 

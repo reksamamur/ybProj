@@ -9,7 +9,7 @@ public class Config {
     //URL REQUEST
     public static final String URL_LOGIN = "https://portly-drainage.000webhostapp.com/isi/login.php";
     public static final String URL_REG = "https://portly-drainage.000webhostapp.com/isi/register.php";
-    public static final String URL_CODE = "http://localhost/yb/code.php";
+    public static final String URL_CODE = "https://portly-drainage.000webhostapp.com/isi/tambah_kode.php";
 
     //POST REQUEST
 
