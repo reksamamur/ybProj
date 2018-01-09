@@ -9,6 +9,7 @@ public class Config {
     //URL REQUEST
     public static final String URL_LOGIN = "https://portly-drainage.000webhostapp.com/isi/login.php";
     public static final String URL_REG = "https://portly-drainage.000webhostapp.com/isi/register.php";
+    public static final String URL_CODE = "http://localhost/yb/code.php";
 
     //POST REQUEST
 
@@ -20,8 +21,11 @@ public class Config {
     public static final String REG_PASS = "rPass";
     public static final String REG_EMAIL = "rEmail";
 
+    public static final String CODE_KODE = "kode";
+
     //STATUS
     public static final String LOGIN_ISLOG = "success";
     public static final String REG_ISREG = "success";
+    public static final String CODE_ISACC = "success";
 
 }

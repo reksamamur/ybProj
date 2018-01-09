@@ -8,10 +8,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
+import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
@@ -56,22 +58,24 @@ public class LoginActivity extends AppCompatActivity {
         final String sEmail = email.getText().toString().trim();
         final String sPass = pass.getText().toString().trim();
 
-//        pDialog.setMessage("Tunggu Sebentar...");
+//        pDialog.setMessage("Harap Tunggu..." + "Test");
+        ProgressDialog prog = ProgressDialog.show(getApplicationContext(),"","Loading....",true);
 //        showDialog();
 
         //Creating a string request
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.URL_LOGIN,
                 new Response.Listener<String>() {
+
                     @Override
                     public void onResponse(String response) {
 
                         //If we are getting success from server
                         if (response.contains(Config.LOGIN_ISLOG)) {
-                            hideDialog();
+//                            hideDialog();
                             gotoMainActivity();
 
                         } else {
-                            hideDialog();
+//                            hideDialog();
                             //Displaying an error message on toast
                             Toast.makeText(getApplicationContext(), "Invalid username or password", Toast.LENGTH_LONG).show();
                         }
@@ -81,7 +85,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         //You can handle error here if you want
-                        hideDialog();
+//                        hideDialog();
                         Toast.makeText(getApplicationContext(), "The server unreachable", Toast.LENGTH_LONG).show();
 
                     }
@@ -111,15 +115,15 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    private void showDialog() {
-        if (!pDialog.isShowing())
-            pDialog.show();
-    }
-
-    private void hideDialog() {
-        if (pDialog.isShowing())
-            pDialog.dismiss();
-    }
+//    private void showDialog() {
+////        if (!pDialog.isShowing())
+//            pDialog.show();
+//    }
+//
+//    private void hideDialog() {
+////        if (pDialog.isShowing())
+//            pDialog.dismiss();
+//    }
 
 
     public void btn_SignUp(View view){
