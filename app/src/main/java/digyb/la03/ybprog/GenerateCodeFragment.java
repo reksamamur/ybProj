@@ -3,6 +3,7 @@ package digyb.la03.ybprog;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -55,8 +56,8 @@ public class GenerateCodeFragment extends Fragment {
         genereate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                sendCode();
                 generateCode();
-
             }
         });
 
@@ -98,19 +99,22 @@ public class GenerateCodeFragment extends Fragment {
     }
 
     public void sendCode() {
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.URL_REG,
+
+        final ProgressDialog prog = ProgressDialog.show(getContext(),"","Loading....",true);
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.URL_CODE,
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
 
                         //If we are getting success from server
                         if (response.contains(Config.CODE_ISACC)) {
-//                            hideDialog();
+                            prog.dismiss();
                             Toast.makeText(getActivity(), "Access Updated", Toast.LENGTH_SHORT).show();
                             gotoMainActivity();
 
                         } else {
-                            hideDialog();
+                            prog.dismiss();
                             //Displaying an error message on toast
 //                            Toast.makeText(getApplicationContext(), "Invalid username or password", Toast.LENGTH_LONG).show();
                             Toast.makeText(getActivity(), response, Toast.LENGTH_SHORT).show();
@@ -121,7 +125,7 @@ public class GenerateCodeFragment extends Fragment {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         //You can handle error here if you want
-                        hideDialog();
+                        prog.dismiss();
                         Toast.makeText(getContext(), "The server unreachable", Toast.LENGTH_LONG).show();
 
                     }
@@ -148,16 +152,6 @@ public class GenerateCodeFragment extends Fragment {
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 //        finish();
         startActivity(intent);
-    }
-
-    private void showDialog() {
-//        if (!pDialog.isShowing())
-//            pDialog.show();
-    }
-
-    private void hideDialog() {
-//        if (pDialog.isShowing())
-//            pDialog.dismiss();
     }
 
 }

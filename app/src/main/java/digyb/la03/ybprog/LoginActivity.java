@@ -58,9 +58,7 @@ public class LoginActivity extends AppCompatActivity {
         final String sEmail = email.getText().toString().trim();
         final String sPass = pass.getText().toString().trim();
 
-//        pDialog.setMessage("Harap Tunggu..." + "Test");
-//        ProgressDialog prog = ProgressDialog.show(getApplicationContext(),"","Loading....",true);
-//        showDialog();
+        final ProgressDialog prog = ProgressDialog.show(LoginActivity.this,"","Loading....",true);
 
         //Creating a string request
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Config.URL_LOGIN,
@@ -71,11 +69,11 @@ public class LoginActivity extends AppCompatActivity {
 
                         //If we are getting success from server
                         if (response.contains(Config.LOGIN_ISLOG)) {
-//                            hideDialog();
+                            prog.dismiss();
                             gotoMainActivity();
 
                         } else {
-//                            hideDialog();
+                            prog.dismiss();
                             //Displaying an error message on toast
                             Toast.makeText(getApplicationContext(), "Invalid username or password", Toast.LENGTH_LONG).show();
                         }
@@ -85,7 +83,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         //You can handle error here if you want
-//                        hideDialog();
+                        prog.dismiss();
                         Toast.makeText(getApplicationContext(), "The server unreachable", Toast.LENGTH_LONG).show();
 
                     }
