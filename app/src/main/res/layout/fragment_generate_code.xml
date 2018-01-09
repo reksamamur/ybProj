@@ -6,10 +6,9 @@
     tools:context="digyb.la03.ybprog.GenerateCodeFragment">
 
     <LinearLayout
-        android:layout_gravity="center_vertical"
+        android:layout_marginTop="250dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
         <TextView
             android:id="@+id/txt_code"
             android:layout_width="match_parent"
@@ -19,7 +18,6 @@
             android:textSize="20dp"
             android:textStyle="bold"
             android:text="@string/Generate_Code" />
-
     </LinearLayout>
 
     <LinearLayout
