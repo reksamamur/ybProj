@@ -53,7 +53,7 @@ public class SignupActivity extends AppCompatActivity {
 
         if (sUser.isEmpty() || sPass.isEmpty() || sEmail.isEmpty())
         {
-            Toast.makeText(this, "Please fill all field", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show();
         }
         else
         {
