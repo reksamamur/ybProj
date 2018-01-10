@@ -11,6 +11,7 @@ public class Config {
     public static final String URL_REG = "https://portly-drainage.000webhostapp.com/isi/register.php";
     public static final String URL_CODE = "https://portly-drainage.000webhostapp.com/isi/tambah_kode.php";
     public static final String URL_LIST = "https://portly-drainage.000webhostapp.com/isi/list_murid.php";
+    public static final String URL_LIST2 = "https://portly-drainage.000webhostapp.com/isi/list_murid2.php";
 
     //POST REQUEST
 
