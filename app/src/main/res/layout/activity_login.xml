@@ -46,7 +46,7 @@
                     android:id="@+id/edt_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/LoginActivity_st_email"
+                    android:hint="Username"
                     android:inputType="textEmailAddress"
                     android:theme="@style/MyEditText" />
             </android.support.design.widget.TextInputLayout>

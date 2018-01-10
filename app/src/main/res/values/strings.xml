@@ -2,13 +2,13 @@
     <string name="app_name">YbApp - Pengawas</string>
 
     <string name="LoginActivity_st_username">Username</string>
-    <string name="LoginActivity_st_email">Username</string>
+    <string name="LoginActivity_st_email">Email</string>
     <string name="LoginActivity_st_password">Password</string>
     <string name="LoginActivity_st_btn_signup">Sign up</string>
     <string name="LoginActivity_st_btn_login">Login</string>
     <string name="LoginActivity_st_or">Or</string>
     <string name="LoginActivity_st_logo">LOGO</string>
-    <string name="LoginActivity_st_forgetpass">Forgot your password?</string>
+    <string name="LoginActivity_st_forgetpass">Not a member ? Sign Up now</string>
 
     <string name="GenerateCode_st">Generate Code</string>
     <string name="ViewScore_st">View Score</string>

@@ -67,9 +67,9 @@ public class GenerateCodeFragment extends Fragment {
     {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
 
-        builder.setMessage("Data bakal di hapus klo generate biji").setTitle("BAHAYA");
+        builder.setMessage("Old code will be replaced with new one !").setTitle("ATTENTION");
 
-        builder.setPositiveButton("OKE BIJI", new DialogInterface.OnClickListener() {
+        builder.setPositiveButton("Yes please", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
                 String SALTCHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
                 StringBuilder salt = new StringBuilder();
@@ -86,9 +86,9 @@ public class GenerateCodeFragment extends Fragment {
                 sendCode();
             }
         });
-        builder.setNegativeButton("DIH COPO", new DialogInterface.OnClickListener() {
+        builder.setNegativeButton("No", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int id) {
-                Toast.makeText(getContext(), "Yah Takut", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "Generate Code Cancelled", Toast.LENGTH_SHORT).show();
             }
         });
 
