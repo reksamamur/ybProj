@@ -10,6 +10,7 @@ public class Config {
     public static final String URL_LOGIN = "https://portly-drainage.000webhostapp.com/isi/login.php";
     public static final String URL_REG = "https://portly-drainage.000webhostapp.com/isi/register.php";
     public static final String URL_CODE = "https://portly-drainage.000webhostapp.com/isi/tambah_kode.php";
+    public static final String URL_LIST = "https://portly-drainage.000webhostapp.com/isi/list_murid.php";
 
     //POST REQUEST
 
@@ -27,5 +28,8 @@ public class Config {
     public static final String LOGIN_ISLOG = "success";
     public static final String REG_ISREG = "success";
     public static final String CODE_ISACC = "success";
+
+    //TEMP DATA
+    public String nama = "";
 
 }

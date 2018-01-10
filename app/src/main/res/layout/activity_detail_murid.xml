@@ -27,32 +27,34 @@
         android:layout_width="match_parent"
         android:padding="20dp"
         android:layout_height="match_parent">
+
         <TextView
             android:id="@+id/code_detail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:text="Code"
+            android:layout_marginTop="10dp"
+            android:text="Nama"
             android:textSize="25dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/name_detail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
             android:layout_marginBottom="10dp"
-            android:text="Name"
+            android:layout_marginTop="10dp"
+            android:text="Information"
             android:textSize="25dp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
         <!-- Text pembatas -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
-            android:textSize="25dp"
-            android:text="Hasil"/>
+            android:layout_marginTop="20dp"
+            android:text="Result"
+            android:textSize="25dp" />
         <!-- Text pembatas -->
         <LinearLayout
             android:orientation="horizontal"
