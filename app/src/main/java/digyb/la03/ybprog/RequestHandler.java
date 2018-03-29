@@ -21,10 +21,10 @@ import javax.net.ssl.HttpsURLConnection;
 public class RequestHandler {
     public String sendPostRequest(String requestURL,
                                   HashMap<String, String> postDataParams) {
-        //Membuat URL
+
         URL url;
 
-        //Objek StringBuilder untuk menyimpan pesan diambil dari server
+
         StringBuilder sb = new StringBuilder();
         try {
             //Inisialisasi URL
@@ -40,11 +40,10 @@ public class RequestHandler {
             conn.setDoInput(true);
             conn.setDoOutput(true);
 
-            //Membuat Keluaran Stream
+
             OutputStream os = conn.getOutputStream();
 
-            //Menulis Parameter Untuk Permintaan
-            //Kita menggunakan metode getPostDataString yang didefinisikan di bawah ini
+
             BufferedWriter writer = new BufferedWriter(
                     new OutputStreamWriter(os, "UTF-8"));
             writer.write(getPostDataString(postDataParams));

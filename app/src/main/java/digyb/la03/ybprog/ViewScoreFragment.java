@@ -36,7 +36,7 @@ import javax.security.auth.Subject;
 
 
 /**
- * A simple {@link Fragment} subclass.
+ * Created by Quantum Higgs on 1/10/2018.
  */
 public class ViewScoreFragment extends Fragment {
 
